@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>List User</title>
+<title>User Management</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -35,8 +35,8 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>List User</h2>
-						<h5>You can edit , add, delete User</h5>
+						<h2>All Users</h2>
+						<h5>You can management user in here</h5>
 
 					</div>
 				</div>
@@ -44,10 +44,14 @@
 				<hr />
 
 				<div class="row">
+				<div>				
+					<button class="btn-primary" style="width: 260px;border: none;border-radius: 3px;height: 30px;margin-bottom: 20px;"
+					 onclick="window.location.href='<c:url value='/admin/user/add'/>';">New User</button>
+				</div>
 					<div class="col-md-12">
 						<!-- Advanced Tables -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Advanced Tables</div>
+							<div class="panel-heading">Data Tables</div>
 							<div class="panel-body">
 								<div class="table-responsive">
 									<table class="table table-striped table-bordered table-hover"
@@ -55,41 +59,33 @@
 										<thead>
 											<tr>
 												<th>ID</th>
-												<th>Avatar</th>
+												<th>Username</th>
 												<th>Email</th>
-												<th>User Name</th>
 												<th>Password</th>
-												<th>Status</th>
-												<th> Role </th>
+												<th> User-Type </th>
 												<th>Action</th>
-												
-
 											</tr>
 										</thead>
 										<tbody>
-											<c:forEach items="${userList }" var="list">
+											<c:forEach items="${ userList }" var="user">
 												<tr class="odd gradeX">
-													<td>${list.id }</td>
-													<c:url value="/image?fname=${list.avatar }" var="imgUrl"></c:url>
-													<td><img height="70" width="90" src="${imgUrl}" /></td>
-													<td>${list.email }</td>
-													<td>${list.username }</td>
-													<td>${list.password }</td>
-													<td class="center">Active</td>
+													<td>${user.id }</td>
+													<td>${user.username }</td>
+													<td>${user.email }</td>
+													<td>${user.password }</td>
 
 													<td class="center"><c:choose>
-															<c:when test="${list.roleId ==1 }">
-													Admin
+													<c:when test="${user.roleId == 1 }">Admin
 													</c:when>
-															<c:otherwise>Client</c:otherwise>
-														</c:choose></td>
+													<c:otherwise>Client
+													</c:otherwise>
+													</c:choose></td>
 
 													<td><a
-														href="<c:url value='/admin/user/edit?id=${list.id }'/>"
+														href="<c:url value='/admin/user/edit?id=${user.id }'/>"
 														class="center">Edit</a> | <a
-														href="<c:url value='/admin/user/delete?id=${list.id }'/>"
+														href="<c:url value='/admin/user/delete?id=${user.id }'/>"
 														class="center">Delete</a></td>
-
 												</tr>
 											</c:forEach>
 

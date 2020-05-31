@@ -35,7 +35,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>All Product</h2>
+						<h2>All Products</h2>
 						<h5>You can management product in here</h5>
 
 					</div>
@@ -44,10 +44,16 @@
 				<hr />
 
 				<div class="row">
+				
+				<div>
+					<button class="btn-primary" style="width: 260px;border: none;border-radius: 3px;height: 30px;margin-bottom: 20px;"
+					 onclick="window.location.href='<c:url value='/admin/product/add'/>';">New Product</button>
+				</div>
+				
 					<div class="col-md-12">
 						<!-- Advanced Tables -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Advanced Tables</div>
+							<div class="panel-heading">Data Tables</div>
 							<div class="panel-body">
 								<div class="table-responsive">
 									<table class="table table-striped table-bordered table-hover"
@@ -64,7 +70,7 @@
 											</tr>
 										</thead>
 										<tbody>
-										<c:forEach items="${proList }" var="pro" >
+										<c:forEach items="${proList}" var="pro" >
 											<tr class="odd gradeX">
 												<td>${pro.id }</td>
 													<c:url value="/image?fname=${pro.image }" var="imgUrl"></c:url>

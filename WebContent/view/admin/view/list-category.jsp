@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Order Management</title>
+<title>Category Management</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -35,9 +35,8 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>All Orders</h2>
-						<h5>You can management oder in here</h5>
-
+						<h2>All Categories</h2>
+						<h5>You can management category in here</h5>
 
 					</div>
 				</div>
@@ -45,59 +44,41 @@
 				<hr />
 
 				<div class="row">
-				
+				<div>
+					<button class="btn-primary" style="width: 260px;border: none;border-radius: 3px;height: 30px;margin-bottom: 20px;"
+					 onclick="window.location.href='<c:url value='/admin/category/add'/>';">New Category</button>
+				</div>
 					<div class="col-md-12">
 						<!-- Advanced Tables -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Advanced Tables</div>
+							<div class="panel-heading">Data Tables</div>
 							<div class="panel-body">
 								<div class="table-responsive">
 									<table class="table table-striped table-bordered table-hover"
 										id="dataTables-example">
 										<thead>
 											<tr>
-												<th>index</th>
-												<th>ID</th>
-												<th>Buyer</th>
-												<th>Email</th>
-												<th>Date</th>
-												<th>Product</th>
-												<th>Quantity</th>
-												<th>Price</th>
-												<th>Sum</th>
-												<th>Status</th>
+												<th>ID </th>
+												<th>Name</th>
 												<th>Action</th>
-
-
 											</tr>
 										</thead>
 										<tbody>
-											</a>
-											<c:set var="index" value="${0}" />
-											<c:forEach items="${listCartItem }" var="list">
-												<tr class="odd gradeX">
-													<c:set var="index" value="${index + 1}" />
-													<td>${index }</td>
-													<td>${list.id }</td>
-													<td>${list.cart.buyer.username }</td>
-													<td>${list.cart.buyer.email }</td>
-													<td>${list.cart.buyDate }</td>
-													<td>${list.product.name }</td>
-													<td>${list.quantity }</td>
-													<td>$ ${list.product.price }</td>
-													<td>$ ${ list.quantity * list.product.price }</td>
-													<td class="center">Pending</td>
-
-
-													<td><a
-														href="<c:url value='/admin/order/edit?id=${list.id }'/>"
-														class="center">Edit</a> | <a
-														href="<c:url value='/admin/order/delete?id=${list.id }'/>"
+										<c:forEach items="${catList}" var="cat" >
+											<tr class="odd gradeX">
+												<td>${cat.id }</td>
+												<td>${cat.name }</td>
+												<td><a
+														href="<c:url value='/category/detail?id=${cat.id }'/>"
+														class="center">Detail</a> | <a
+														href="<c:url value='/admin/product/edit?id=${cat.id }'/>"
+														class="center">Edit</a>
+														| <a
+														href="<c:url value='/admin/product/delete?id=${cat.id }'/>"
 														class="center">Delete</a></td>
-
-												</tr>
+												
+											</tr>
 											</c:forEach>
-
 										</tbody>
 									</table>
 								</div>

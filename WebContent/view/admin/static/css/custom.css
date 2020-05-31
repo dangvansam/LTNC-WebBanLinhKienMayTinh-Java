@@ -1,17 +1,4 @@
 
-/*=============================================================
-    Authour URI: www.binarycart.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
-/*==============================================
-    GENERAL  STYLES    
-    =============================================*/
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -24,15 +11,16 @@ body {
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
-    background:#F3F3F3;
    
 }
 #page-inner {
     width:100%;
     margin:10px 20px 10px 0px;
-    background-color:#fff!important;
+    background-color:papayawhip;
     padding:10px;
     min-height:1200px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .text-center {
@@ -42,7 +30,7 @@ body {
     border:1px solid #f3f3f3;
 }
 h2 {
-    color: #f00;
+    font-weight: bold;
 }
 h4 {
     padding-top:10px;
@@ -207,12 +195,11 @@ max-width:170px;
 
 .navbar-cls-top .navbar-brand {
 	color: #fff;
-background: #C90000;
-width: 260px;
+background: crimson;
+width: 200px;
 text-align: center;
 height: 60px;
-font-size: 30px;
-font-weight: 700;
+font-size: 28px;
 }
 .active-menu {
     background-color:#C90000!important;
@@ -357,10 +344,9 @@ line-height: 1.428571429;
  
  @media(min-width:768px) {
      #page-wrapper{
-               margin: 0 0 0 260px;
-        padding: 15px 30px;
-        min-height: 1200px;
-		
+		margin: -11px -17px 0px 191px;
+	    padding: 15px 30px;
+	    min-height: 1200px;
     }
 	
 	

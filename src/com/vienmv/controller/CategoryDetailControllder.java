@@ -11,27 +11,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.vienmv.model.Category;
-import com.vienmv.model.Product;
 import com.vienmv.service.CategoryService;
 import com.vienmv.service.ProductService;
 import com.vienmv.service.impl.CategoryServiceImpl;
-import com.vienmv.service.impl.ProductServiceImpl;
 
-@WebServlet(urlPatterns="/product/detail")
-public class ProductDetailController extends HttpServlet {
-	ProductService productService = new ProductServiceImpl();
+
+@WebServlet(urlPatterns="/category/detail")
+public class CategoryDetailControllder extends HttpServlet {
 	CategoryService categoryService = new CategoryServiceImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String id = req.getParameter("id");
-		Product product = productService.get(Integer.parseInt(id));
-		List<Category> categories = categoryService.getAll();
+		Category cat = categoryService.get(Integer.parseInt(id));
 
-		req.setAttribute("categories", categories);
+		req.setAttribute("category", cat);
 
-		req.setAttribute("product", product);
-
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/product-detail.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/category-detail.jsp");
 		dispatcher.forward(req, resp);
 	}
 

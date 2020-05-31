@@ -5,23 +5,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Dashboard</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Edit User</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
 <link href="${url}/css/font-awesome.css" rel="stylesheet" />
-<!-- MORRIS CHART STYLES-->
-<link href="${url}/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
 <link href="${url}/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
 </head>
-<body>
 <body>
 	<div id="wrapper">
 		<jsp:include page="/view/admin/view/nav-bar.jsp"></jsp:include>
@@ -32,42 +28,42 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Admin Dashboard</h2>
-						<h5>Welcome : ${username}</h5>
+						<h2>Create New Category</h2>
 					</div>
 				</div>
-				<div class="row" style="text_align: left")>
-					<div style="">
-						<h3>
-							Total User: ${ total_user }
-						</h3> 
+				<!-- /. ROW  -->
+				<hr />
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Form Elements -->
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="row">
+									<div class="" style="padding: 28px;">
+									
+										<form role="form" action="add"  method="post" enctype="multipart/form-data">
+											<div class="form-group">
+												<label>Category Name:</label> <input class="form-control" placeholder="Enter category name" name="name"/>
+											</div>
+											<button type="submit" class="btn btn-primary">Create</button>
+											<button type="reset" class="btn btn-warning">Reset</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Form Elements -->
 					</div>
-					<div style="">
-						<h3>
-							Total Product: ${ total_pro }
-						</h3> 
-					</div>
-					<div style="">
-						<h3>
-							Total Category: ${ total_cat }
-						</h3> 
-					</div>
-					<div style="">
-						<h3>
-							Total Cart: ${ total_cart }
-						</h3> 
-					</div>
-					
-					
-					
 				</div>
-				
+				<!-- /. ROW  -->
+				<div class="row">
+					<div class="col-md-12"></div>
+				</div>
+				<!-- /. ROW  -->
 			</div>
-
+			<!-- /. PAGE INNER  -->
 		</div>
-		<!-- /. PAGE INNER  -->
-	</div>
-	<!-- /. PAGE WRAPPER  -->
+		<!-- /. PAGE WRAPPER  -->
 	</div>
 	<!-- /. WRAPPER  -->
 	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
@@ -77,14 +73,8 @@
 	<script src="${url}/js/bootstrap.min.js"></script>
 	<!-- METISMENU SCRIPTS -->
 	<script src="${url}/js/jquery.metisMenu.js"></script>
-	<!-- MORRIS CHART SCRIPTS -->
-	<script src="${url}/js/morris/raphael-2.1.0.min.js"></script>
-	<script src="${url}/js/morris/morris.js"></script>
 	<!-- CUSTOM SCRIPTS -->
 	<script src="${url}/js/custom.js"></script>
-
-
-</body>
 
 </body>
 </html>
