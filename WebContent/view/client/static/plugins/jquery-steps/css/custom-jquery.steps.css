@@ -1,0 +1,280 @@
+/*Wizard Jquery Steps
+------------------------------------*/
+/*Common*/
+.wizard {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.wizard ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.wizard ul > li {
+	padding: 0;
+	display: inline-block;
+}
+
+/* Accessibility */
+.wizard > .steps .current-info,
+.wizard > .content > .title {
+    left: -999em;
+    position: absolute;
+}
+
+/*Wizard Steps*/
+.wizard > .steps {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.wizard > .steps .number {
+    float: left;
+	font-size: 36px;
+	margin-right: 15px;
+}
+
+.wizard > .steps > ul > li {
+    width: 31.2%;
+    margin-left: 30px;
+    position: relative;
+}
+
+.wizard > .steps > ul > li:first-child {
+	margin-left: 0;
+}
+
+@media (max-width: 991px) {
+	.wizard > .steps > ul > li {
+		width: 100%;
+		margin: 0 0 15px 0;
+	}
+}
+
+.wizard > .steps > ul > li,
+.wizard > .actions > ul > li {
+    float: left;
+}
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active {
+    width: auto;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.wizard > .steps h2 {
+	font-size: 22px;
+	margin: 0 0 5px;
+}
+
+.wizard > .steps p {
+	opacity: 0.6;
+	font-size: 16px;
+}
+
+.wizard > .steps i {
+	top: 15px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	padding: 8px;
+	color: #c4c4c4;
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	display: inline-block;
+	border: 2px dashed #e0e0e0;
+}
+
+/*Disabled*/
+.wizard > .steps .disabled a,
+.wizard > .steps .disabled a:hover,
+.wizard > .steps .disabled a:active {
+	color: #fff;
+	cursor: default;
+    background: inherit;
+	border: 1px solid #eee;
+	-webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+}
+
+.wizard > .steps .disabled .number {
+	color: #18ba9b;
+}
+
+/*Current*/
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active {
+	color: #fff;
+    background: #18ba9b;
+    -webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+}
+
+.wizard > .steps .current .number,
+.wizard > .steps .current h2,
+.wizard > .steps .current p,
+.wizard > .steps .current i {
+	color: #fff;
+}
+
+.wizard > .steps .current i {
+	border-color: #fff;
+}
+
+/*Done*/
+.wizard > .steps .done a,
+.wizard > .steps .done a:hover,
+.wizard > .steps .done a:active {
+    color: #fff;
+    background: #2cd5b6;
+    -webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+}
+
+.wizard > .steps .done .number,
+.wizard > .steps .done p {
+	color: #fff;
+}
+
+.wizard > .steps .done h2 {
+	color: #fff;
+}
+
+.wizard > .steps .done i {
+	color: #fff;
+	border-color: #fff;
+}
+
+/*Error*/
+.wizard > .steps .error a,
+.wizard > .steps .error a:hover,
+.wizard > .steps .error a:active {
+    color: #fff;
+    background: #c9253c;
+    -webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+}
+
+.wizard > .content > .body em.invalid {
+    display: block;
+    color: #8a1f11;
+    font-weight: 400;
+    display: none !important;
+    -webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+}
+
+.wizard > .content > .body input.invalid {
+	color: #8a1f11;
+	font-weight: 400;
+	border: 1px solid #eec5c7 !important;
+	-webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;
+}
+
+.wizard > .content > .body input.invalid.form-control::-moz-placeholder {
+	color: #8a1f11;
+}
+
+.wizard > .content > .body input.invalid.form-control:-ms-input-placeholder {
+	color: #8a1f11;
+}
+
+.wizard > .content > .body input.invalid.form-control::-webkit-input-placeholder {
+	color: #8a1f11;
+}
+
+/*Small Input Field*/
+.wizard > .content > .body .input-small-field input {
+	width: 20%;
+	float: left;
+	margin-right: 10px;
+}
+
+.wizard > .content > .body .input-small-field input.invalid {
+	margin-right: 10px;
+}
+
+.wizard > .content > .body .input-small-field span.slash {
+	color: #888;
+	float: left;
+	font-size: 20px;
+	margin-right: 8px;
+}
+
+/*Content*/
+.wizard > .content {
+	overflow: hidden;
+    position: relative;
+}
+
+.wizard > .content {
+	margin-top: 35px;
+	padding-top: 35px;
+	border-top: 1px solid #eee;
+}
+
+.wizard > .content > .body {
+	padding: 0;
+	width: 100%;
+}
+
+/*Actions*/
+.wizard > .actions {
+    text-align: right;
+}
+
+.wizard > .actions > ul {
+    display: inline-block;
+}
+
+.wizard > .actions > ul > li {
+    margin-left: 10px;
+}
+
+.wizard > .actions > ul > li:first-child {
+	margin-left: 0;
+}
+
+.wizard > .actions a {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    min-width: 126px;
+   	padding: 8px 10px;
+    text-align: center;
+    background: #18ba9b;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.wizard > .actions a:hover {
+	background: #2cd5b6;
+}
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active {
+    color: #fff;
+    background: #82dac9;
+}

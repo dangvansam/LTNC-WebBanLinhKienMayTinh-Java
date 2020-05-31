@@ -1,0 +1,99 @@
+* {
+  direction: rtl;
+  unicode-bidi: embed; /* bidi-override */
+}
+
+.style-swticher-header .theme-close {
+  left: 6px;
+  right: auto;
+}
+
+.tparrows.tp-rightarrow .tp-arr-titleholder  {
+	text-align: right;
+}
+
+/* Arrows */
+.fa-angle-left::before {
+  content: "\f105";
+}
+.fa-angle-right::before {
+  content: "\f104";
+}
+
+.header .dropdown > a:after, .header .dropdown-submenu > a:after,
+.header-v1 .dropdown > a::after, .header-v1 .dropdown-submenu > a::after,
+.header-v2 .dropdown > a::after, .header-v2 .dropdown-submenu > a::after,
+.header-v3 .dropdown > a::after, .header-v3 .dropdown-submenu > a::after,
+.header-v4 .dropdown > a::after, .header-v4 .dropdown-submenu > a::after,
+.header-v5 .dropdown-submenu > a::after,
+.header-v6 .dropdown-submenu > a::after,
+.header-v7 .navbar-default .navbar-nav > li > a::after {
+  content: "\f104";
+}
+.header .dropdown > a:after,
+.header-v1 .dropdown > a:after,
+.header-v2 .dropdown > a:after,
+.header-v3 .dropdown > a:after,
+.header-v4 .dropdown > a:after {
+  content: "\f107";
+}
+
+.owl-carousel .owl-item .avatar-of-reviewer,
+.owl-carousel .owl-item .owl-img-auto {
+	width: auto;
+	display: inline-block;
+}
+
+.testimonials-v3 .owl-buttons .owl-next::after,
+.testimonials-v3 .owl-buttons .owl-prev::after {
+	cursor: pointer;
+}
+.testimonials-v3 .owl-buttons .owl-next::after {
+  content: "\f104";
+}
+.testimonials-v3 .owl-buttons .owl-prev::after {
+  content: "\f105";
+}
+
+.owl-slider-v2 .owl-stage-outer {
+  margin-bottom: 20px;
+}
+.owl-page {
+  cursor: pointer;
+}
+.header-v5 .badge-open small em {
+  font-style: normal;
+  margin: 0 5px;
+}
+
+/* tooltip */
+.tooltip.right .tooltip-arrow {
+  left: 0;
+  right: auto;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000;
+}
+.tooltip.left .tooltip-arrow {
+  right: 0;
+  left: auto;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+}
+
+.fa-caret-right::before {
+  content: "\f0d9";
+}
+
+/* Breadcrumbs */
+.breadcrumb-v4-in > li + li::before,
+.breadcrumb-v5 > li + li::before {
+  display: none;
+}
+.breadcrumb-v4-in > li + li::after,
+.breadcrumb-v5 > li + li::after {
+  content: "\f104";
+  color: #ccc;
+  font-family: FontAwesome;
+  margin-right: 7px;
+  padding-left: 8px;
+}

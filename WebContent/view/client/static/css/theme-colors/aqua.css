@@ -1,0 +1,421 @@
+/* 
+* Version: 1.6
+* Aqua Color 		: #27d7e7;
+* Aqua Hover Color  : #26bac8;
+* Additional color  : a7e8ee;
+* rgba(39, 215, 231, 1);
+*/
+
+a {
+    color: #27d7e7;
+}
+
+a:hover {
+    color: #27d7e7;
+}
+
+/*Headers Default
+------------------------------------*/
+
+.header-v5 .navbar-default .navbar-nav > li > a:hover,
+.header-v5 .navbar-default .navbar-nav > .active > a {
+    border-top-color: #27d7e7;
+}
+
+.header-v5 .navbar-default .navbar-nav > .active > a {
+    color: #27d7e7;
+}
+
+.header-v5 .navbar-default .navbar-nav > li:hover > a {
+    color: #27d7e7;
+}
+.header-v5 .navbar-default .navbar-nav > .open > a,
+.header-v5 .navbar-default .navbar-nav > .open > a:hover,
+.header-v5 .navbar-default .navbar-nav > .open > a:focus {
+    color: #27d7e7;
+}
+
+.header-v5 .dropdown-menu li > a:hover {
+    background:  #27d7e7;
+}
+
+.header-v5 .dropdown-menu .active > a,
+.header-v5 .dropdown-menu li > a:hover {
+    background:  #27d7e7;
+}
+
+.header-v5 .dropdown-menu li a:focus {
+    background:  #fff;
+}
+
+.header-v5 .dropdown-menu {
+    border-color: #27d7e7;
+}
+
+.header-v5 .dropdown-menu li.dropdown-submenu:hover > a {
+    background:  #27d7e7;
+}
+
+.header-v5 .dropdown-menu .style-list li > a:hover {
+    background: none;
+}
+
+.header-v5 .style-list li a:hover {
+    color: #27d7e7;
+}
+/* Shopping cart*/
+.header-v5 .shop-badge.badge-icons i {
+    color: #27d7e7;
+}
+
+.header-v5 .shop-badge span.badge-sea {
+    background:  #27d7e7;
+}
+
+.header-v5 .badge-open {
+    border-top: 2px solid #27d7e7;
+    box-shadow: 0 5px 5px 0 rgba(90, 90, 90, 0.075);
+}
+
+.header-v5 li.subtotal .subtotal-cost {
+    color: #27d7e7;
+}
+
+.btn-u.btn-brd.btn-u-sea-shop {
+    border-color: #27d7e7;
+    color: #27d7e7;
+}
+
+.btn-u.btn-brd.btn-u-sea-shop:hover {
+    border-color: #27d7e7;
+    color: #27d7e7;
+}
+
+.btn-u.btn-brd.btn-u-sea-shop.btn-brd-hover:hover {
+    background:  #27d7e7;
+}
+
+.btn-u.btn-u-sea-shop {
+	background-color: #27d7e7;
+}
+.btn-u.btn-u-sea-shop:hover {
+    border-color: #27d7e7;
+    background: #26bac8	;
+
+}
+
+/*Responsive Navbar*/
+@media (max-width: 991px) {
+    /*Responsive code for max-width: 991px*/
+    
+    .header-v5 .navbar-default .navbar-nav > .active > a,
+    .header-v5 .navbar-default .navbar-nav > .active > a:hover,
+    .header-v5 .navbar-default .navbar-nav > .active > a:focus {
+        background: #27d7e7;
+    }
+
+    .header-v5 .dropdown-menu li.dropdown-submenu:hover > a {
+        background:  none;
+    }
+
+}
+
+/* Tab v5
+------------------------------------*/
+.tab-v5 .nav-tabs > li.active > a,
+.tab-v5 .nav-tabs > li.active > a:hover,
+.tab-v5 .nav-tabs > li.active > a:focus {
+    border-color: #27d7e7;
+}
+
+.tab-v5 .nav-tabs > li > a:hover {
+    border-bottom: 1px solid #27d7e7;
+}
+/* Product Rating
+------------------------------------*/
+.product-ratings li.reply a {
+    color: #27d7e7;
+}
+/* Illustration v2
+------------------------------------*/
+.illustration-v2 .add-to-cart:hover {
+    background:  rgba(39, 215, 231, 0.5);
+}
+
+.product-description h4.title-price a:hover {
+    color: #27d7e7;
+}
+
+.product-ratings li .rating-selected {
+    color: #27d7e7;
+}
+
+.product-ratings li .rating {
+    color: #a7e8ee;
+}
+
+.product-ratings li.like-icon a {
+    color: #a7e8ee;
+}
+
+.product-ratings li.like-icon a:hover {
+    color: #27d7e7;
+}
+
+/* Illustration v4
+------------------------------------*/
+.illustration-v4 .thumb-product-purchase a {
+    color: #a7e8ee;
+}
+
+.illustration-v4 .thumb-product-purchase a:hover {
+    color: #27d7e7;
+}
+
+.illustration-v4 .thumb-product-in h4 a:hover {
+    color: #27d7e7;
+}
+
+/* Twitter Block
+------------------------------------*/
+.twitter-block .item a {
+    color: #27d7e7;
+}
+
+/* Shop bg
+------------------------------------*/
+.shop-bg-green {
+    background:  #27d7e7;
+}
+
+/* Shop Subscribe
+------------------------------------*/
+.shop-subscribe {
+    background:  #27d7e7;
+}
+
+.footer-v4 .copyright a {
+    color: #27d7e7;
+}
+
+/* Shop text
+------------------------------------*/
+.shop-green {
+    color: #27d7e7;
+}
+
+/* Breadcrumbs v4
+------------------------------------*/
+.breadcrumbs-v4 .breadcrumb-v4-in li.active,
+ .breadcrumbs-v4 .breadcrumb-v4-in li a:hover {
+    color: #27d7e7;
+}
+
+/* Wizard
+------------------------------------*/
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active {
+    background:  #26bac8;
+}
+
+.wizard > .steps .disabled .number {
+    color: #27d7e7;
+}
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active {
+    background:  #a7e8ee;
+}
+
+.wizard > .actions a {
+    background:  #27d7e7;
+}
+
+.wizard > .actions a:hover {
+    background:  #a7e8ee;
+}
+
+.wizard > .steps .done a,
+.wizard > .steps .done a:hover,
+.wizard > .steps .done a:active {
+    background:  #27d7e7;
+}
+
+/* Filter By Block
+------------------------------------*/
+.filter-by-block h1 {
+    background:  #27d7e7;
+}
+
+/* Checkbox List
+------------------------------------*/
+.checkbox-list .checkbox input + i:after,
+.checkbox-list .checkbox small a {
+    color: #27d7e7;
+}
+
+.checkbox-list .checkbox i,
+.checkbox-list .checkbox:hover i,
+.checkbox-list .checkbox input:focus + i,
+.checkbox-list .checkbox input:checked + i {
+    border-color: #27d7e7;
+}
+
+/* noUi Connect
+------------------------------------*/
+.noUi-connect {
+    background:  #27d7e7;
+}
+
+/* Stars Rating Label
+------------------------------------*/
+.stars-ratings label {
+    color: #a7e8ee;
+}
+
+.stars-ratings input + label:hover,
+.stars-ratings input:checked ~ label,
+.stars-ratings input + label:hover ~ label {
+    color: #27d7e7;
+}
+
+/* Grid List Icon v2
+------------------------------------*/
+.grid-list-icons i {
+    background:  #27d7e7;
+}
+
+/* Pagination v2
+------------------------------------*/
+.pagination.pagination-v2 > li > a:hover,
+.pagination.pagination-v2 > .active > a,
+.pagination.pagination-v2 > .active > span,
+.pagination.pagination-v2 > .active > a:hover,
+.pagination.pagination-v2 > .active > span:hover,
+.pagination.pagination-v2 > .active > a:focus,
+.pagination.pagination-v2 > .active > span:focus {
+    background:  #27d7e7;
+    border-color: #27d7e7;
+}
+
+/* Add To Wish List
+------------------------------------*/
+.add-to-wishlist i {
+    color: #a7e8ee;
+}
+
+.add-to-wishlist a:hover,
+.add-to-wishlist .wishlist-in:hover i,
+.add-to-wishlist .compare-in:hover i {
+    color: #27d7e7;
+}
+
+.add-to-wishlist a:hover,
+.add-to-wishlist .wishlist-in:hover i,
+.add-to-wishlist .compare-in:hover i {
+    color: #27d7e7;
+}
+
+/* Breadcrumb v5
+------------------------------------*/
+.breadcrumb-v5 li.active,
+.breadcrumb-v5 li a:hover {
+    color: #27d7e7;
+}
+
+/* Shop Product Social
+------------------------------------*/
+.shop-product .shop-product-social li i:hover {
+    color: #27d7e7;
+}
+/* Shop Product
+------------------------------------*/
+.shop-product .product-review-list a:hover {
+    color: #27d7e7;
+}
+
+.shop-product .product-size input:checked ~ label {
+    border-color: #27d7e7;
+    color: #27d7e7;
+}
+
+.shop-product .product-size label:hover {
+    border-color: #27d7e7;
+    color: #27d7e7;
+}
+
+.shop-product .product-color input:checked ~ label {
+    border: 2px solid #27d7e7;
+}
+
+.shop-product .product-color label:hover {
+    border: 2px solid #27d7e7;
+}
+
+/* Shop Service
+------------------------------------*/
+.product-service .product-service-heading {
+    background:  #27d7e7;
+}
+
+.product-service:hover .product-service-heading {
+    background:  #a7e8ee;	
+}
+
+/* Info Block v2
+------------------------------------*/
+.info-block-v2 i {
+    color: #27d7e7;
+}
+
+/* Log Reg v3
+------------------------------------*/
+.log-reg-v3 .checkbox input + i:after {
+    color: #27d7e7;
+}
+
+.log-reg-v3 .checkbox input:checked + i {
+    border-color: #27d7e7;
+}
+.log-reg-v3 .checkbox i {
+    border-color: #a7e8ee;
+}
+
+.log-reg-v3 .checkbox:hover i {
+    border-color: #27d7e7;
+}
+
+/* Cus Form Horizantal
+------------------------------------*/
+.cus-form-horizontal .input-small-field a {
+    color: #27d7e7;
+}
+.cus-form-horizontal .input-small-field a:hover {
+    color: #27d7e7;
+    text-decoration: none;
+}
+
+/* Accordion v2
+------------------------------------*/
+.accordion-v2.plus-toggle .panel-heading a:before {
+    background:  #27d7e7;
+}
+
+#topcontrol:hover {
+    background-color: #27d7e7;
+}
+
+/* Grid List Icons
+------------------------------------*/
+.grid-list-icons i:hover {
+    background: #a7e8ee;
+    text-decoration: none;
+}
+
+/* Grid List Icons
+------------------------------------*/
+.wishlist-category a {
+    color: #27d7e7;
+}

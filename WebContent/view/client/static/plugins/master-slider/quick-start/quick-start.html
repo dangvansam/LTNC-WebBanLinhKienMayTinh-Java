@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>index</title>	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+				
+		<!-- Base MasterSlider style sheet -->
+		<link rel="stylesheet" href="masterslider/style/masterslider.css" />
+		 
+		<!-- MasterSlider default skin -->
+		<link rel="stylesheet" href="masterslider/skins/default/style.css" />
+		 
+		<!-- Latest version of jQuery from Google CDN -->
+		<!-- You can remove it if jQuery is already included. -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		 
+		<!-- MasterSlider main JS file -->
+		<script src="masterslider/masterslider.js"></script>
+				
+	</head>
+
+	<body>
+		
+<!-- masterslider -->
+<div class="master-slider ms-skin-default" id="masterslider">
+    <!-- new slide -->
+    <div class="ms-slide">
+         
+        <!-- slide background -->
+        <img src="masterslider/blank.gif" data-src="masterslider/images/1.jpg" alt="lorem ipsum dolor sit"/>     
+         
+        <!-- slide text layer -->
+        <div class="ms-layer ms-caption" style="top:10px; left:30px;">
+            Lorem ipsum dolor sit amet
+        </div>
+         
+    </div>
+    <!-- end of slide -->
+     
+    <!-- new slide -->
+    <div class="ms-slide">
+         
+        <!-- slide background -->
+        <img src="masterslider/blank.gif" data-src="masterslider/images/2.jpg" alt="lorem ipsum dolor sit"/>     
+         
+        <!-- slide text layer -->
+        <div class="ms-layer ms-caption" style="top:10px; left:30px;">
+            Lorem ipsum dolor sit amet
+        </div>
+         
+        <!-- linked slide -->
+        <a href="http://codecanyon.net/user/averta">Averta</a>
+         
+    </div>
+    <!-- end of slide -->
+     
+    <!-- new slide -->
+    <div class="ms-slide">
+         
+        <!-- slide background -->
+        <img src="masterslider/blank.gif" data-src="masterslider/images/3.jpg" alt="lorem ipsum dolor sit"/>     
+         
+        <!-- slide text layer -->
+        <div class="ms-layer ms-caption" style="top:10px; left:30px;">
+            Lorem ipsum dolor sit amet
+        </div>
+		
+        <!-- youtube video -->
+        <a href="http://www.youtube.com/embed/YHWkro9-e9Q?hd=1&wmode=opaque&controls=1&showinfo=0" data-type="video">Youtube video</a>
+         
+    </div>
+    <!-- end of slide -->
+ 
+</div>
+<!-- end of masterslider -->
+		
+	</body>
+	
+	<script type="text/javascript">		
+	    var slider = new MasterSlider();
+	    slider.setup('masterslider' , {
+	         width:800,    // slider standard width
+	         height:350,   // slider standard height
+	         space:5
+	         // more slider options goes here...
+	         // check slider options section in documentation for more options.
+	    });
+	    // adds Arrows navigation control to the slider.
+	    slider.control('arrows');
+	</script>
+</html>
