@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edit User</title>
+<title>Create Category</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -40,13 +40,12 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="" style="padding: 28px;">
-									
 										<form role="form" action="add"  method="post" enctype="multipart/form-data">
 											<div class="form-group">
-												<label>Category Name:</label> <input class="form-control" placeholder="Enter category name" name="name"/>
+												<label>Category Name:</label><input name="cate_name" class="form-control" placeholder="Enter category name" />
 											</div>
 											<button type="submit" class="btn btn-primary">Create</button>
-											<button type="reset" class="btn btn-warning">Reset</button>
+											<button type="reset" class="btn btn-warning" onclick="console.log(document.getElementById('aaaaa').value);">Reset</button>
 										</form>
 									</div>
 								</div>

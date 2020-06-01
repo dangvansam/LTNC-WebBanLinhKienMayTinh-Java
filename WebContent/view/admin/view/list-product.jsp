@@ -63,7 +63,7 @@
 												<th>ID </th>
 												<th>Image</th>
 												<th>Name</th>
-												<th>Price($)</th>
+												<th>Price</th>
 												<th>Category</th>
 												<th>Description</th>
 												<th>Action </th>
@@ -73,8 +73,8 @@
 										<c:forEach items="${proList}" var="pro" >
 											<tr class="odd gradeX">
 												<td>${pro.id }</td>
-													<c:url value="/image?fname=${pro.image }" var="imgUrl"></c:url>
-													<td><img height="150" width="200" src="${imgUrl}" /></td>
+													<c:url value="/Images/${pro.image}" var="imgUrl"></c:url>
+													<td><img height="150" width="150" src="${imgUrl}" /></td>
 
 													<td>${pro.name }</td>
 												<td>${pro.price }</td>

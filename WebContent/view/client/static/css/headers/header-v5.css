@@ -32,7 +32,6 @@
 .topbar-v3 ul.left-topbar > li > a {
 	color: #fff;
 	font-size: 12px;
-	text-transform: uppercase;
 }
 
 .topbar-v3 ul.left-topbar > li > a:hover {
@@ -128,7 +127,6 @@
 .topbar-v3 .right-topbar li a {
 	color: #fff;
 	font-size: 12px;
-	text-transform: uppercase;
 }
 
 /*Search*/

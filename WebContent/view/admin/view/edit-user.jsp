@@ -38,17 +38,15 @@
 					<div class="col-md-12">
 						<!-- Form Elements -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Info you can change</div>
 							<div class="panel-body">
 								<div class="row">
-									<div class="col-md-6">
-										<h3>User:</h3>
+									<div class="" style="padding: 28px;">
 										<c:url value="/admin/user/edit" var="edit"></c:url>
 										<form role="form" action="${edit }" method="post"
 											enctype="multipart/form-data">
 											<input name="id" value="${user.id }" type="text" hidden="">
 											<div class="form-group">
-												<label>User Name:</label> <input class="form-control"
+												<label>User Name</label> <input class="form-control"
 													value="${user.username }" name="username" />
 											</div>
 											<div class="form-group">
@@ -70,12 +68,8 @@
 
 											</div>
 
-											<div class="form-group">
-												<label>Choose Avatar</label> <input type="file"
-													name="avatar" />
-											</div>
-											<button type="submit" class="btn btn-default">Edit</button>
-											<button type="reset" class="btn btn-primary">Reset</button>
+											<button type="submit" class="btn btn-primary">Edit</button>
+											<button type="reset" class="btn btn-warning">Reset</button>
 										</form>
 
 

@@ -1,104 +1,106 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<
-<script type="text/javascript">
-<!--
-	$(document).ready(function() {
-
-		var readURL = function(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-
-				reader.onload = function(e) {
-					$('.avatar').attr('src', e.target.result);
-				}
-
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-
-		$(".file-upload").on('change', function() {
-			readURL(this);
-		});
-	});
-//-->
-</script>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>My Account</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<c:url value="/view/client/static" var="url"></c:url>
+<title>Register</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Web Fonts -->
+<link rel='stylesheet' type='text/css'
+	href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+<!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	href="${url}/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${url}/css/shop.style.css">
+
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="${url}/css/headers/header-v5.css">
+<link rel="stylesheet" href="${url}/css/footers/footer-v4.css">
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="${url}/plugins/animate.css">
+<link rel="stylesheet" href="${url}/plugins/line-icons/line-icons.css">
+<link rel="stylesheet"
+	href="${url}/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="${url}/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+<!-- <link rel="stylesheet" href="${url}/plugins/sky-forms-pro/skyforms/css/sky-forms.css"> -->
+<!-- <link rel="stylesheet" href="${url}/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css"> -->
+
+<!-- CSS Page Styles -->
+<link rel="stylesheet" href="${url}/css/pages/log-reg-v3.css">
+
+<!-- Style Switcher -->
+<link rel="stylesheet" href="${url}/css/plugins/style-switcher.css">
+
+<!-- CSS Theme -->
+<link rel="stylesheet" href="${url}/css/theme-colors/default.css"
+	id="style_color">
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="${url}/css/custom.css">
 </head>
 <body>
+	<!-- Subiz -->
+	<script>
+		(function(s, u, b, i, z) {
+			u[i] = u[i] || function() {
+				u[i].t = +new Date();
+				(u[i].q = u[i].q || []).push(arguments);
+			};
+			z = s.createElement('script');
+			var zz = s.getElementsByTagName('script')[0];
+			z.async = 1;
+			z.src = b;
+			z.id = 'subiz-script';
+			zz.parentNode.insertBefore(z, zz);
+		})(document, window, 'https://widgetv4.subiz.com/static/js/app.js',
+				'subiz');
+		subiz('setAccount', 'acqetkhujxyunuatbxzw');
+	</script>
+	<!-- End Subiz -->
+<body class="header-fixed">
+	<div class="wrapper">
+		<!--=== Header v5 ===-->
+		<div class="header-v5 header-static">
+			<!-- Topbar v3 -->
+			<jsp:include page="topbar.jsp"></jsp:include>
+			<!-- End Topbar v3 -->
 
-
-	<hr>
-	<div class="container bootstrap snippet">
-		<div class="row">
-			<div class="col-sm-10">
-				<h1>User name</h1>
-			</div>
-			<div class="col-sm-2">
-				<a href="${pageContext.request.contextPath }" class="pull-right"><img
-					title="profile image" class="img-circle img-responsive"
-					src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a>
-			</div>
+			<!-- Navbar -->
+			<jsp:include page="navbar.jsp"></jsp:include>
+			<!-- End Navbar -->
 		</div>
-		<div class="row">
-			<div class="col-sm-3">
-				<!--left col-->
-				<c:url value="/member/myaccount" var="myaccount"></c:url>
-				<form class="form" action="${myaccount }" method="post"
-					id="registrationForm" enctype="multipart/form-data">
-					<input name="role" value="${sessionScope.account.roleId }" hidden="" >
-					<input name="id" value="${sessionScope.account.id }" hidden="">
-					<div class="text-center">
-						<c:url value="/image?fname=${sessionScope.account.avatar }"
-							var="imgUrl"></c:url>
-						<img src="${imgUrl }" class="avatar img-circle img-thumbnail"
-							alt="avatar">
-						<h6>Upload a different photo...</h6>
-						<input type="file" name="avatar" class="text-center center-block file-upload">
-					</div>
-					</hr>
-					<br>
+		<!--=== End Header v5 ===-->
+
+		<!--=== Breadcrumbs v4 ===-->
+		<div class="breadcrumbs-v4">
+			<div class="container">
+				<h1>
+					SD<span class="shop-green">COMPUTER</span>
+				</h1>
+				<ul class="breadcrumb-v4-in">
+					<li><a href="${pageContext.request.contextPath }/welcome">Trang chủ</a></li>
+					<li class="active">Thông tin tài khoản</li>
+				</ul>
 			</div>
-			<!--/col-3-->
-			<div class="col-sm-9">
-
-
+			<!--/end container-->
+		</div>
+		<!--=== End Breadcrumbs v4 ===-->
 
 				<div class="tab-content">
 					<div class="tab-pane active" id="home">
 						<hr>
 
-						<div class="form-group">
-
+						<div class="form-group" style="">
 							<div class="col-xs-6">
-								<label for="first_name"><h4>User Name:</h4></label> <input
+								<label for="first_name"><h4>Tên đăng nhập</h4></label> <input
 									type="text" class="form-control" name="username"
 									id="first_name" value="${sessionScope.account.username }"
 									title="enter your first name if any.">
@@ -108,7 +110,7 @@
 						<div class="form-group">
 
 							<div class="col-xs-6">
-								<label for="first_name"><h4>Email:</h4></label> <input
+								<label for="first_name"><h4>Email</h4></label> <input
 									type="text" class="form-control" name="email" id="first_name"
 									value="${sessionScope.account.email }"
 									title="enter your first name if any.">
@@ -125,127 +127,13 @@
 						</div>
 
 						<div class="form-group">
-
-							<div class="col-xs-6">
-								<label for="last_name"><h4>Website</h4></label> <input
-									type="text" class="form-control" name="website" id="last_name"
-									value="http://unify.com" title="enter your last name if any."
-									disabled="disabled">
-							</div>
-						</div>
-
-						<div class="form-group">
 							<div class="col-xs-12">
 								<br>
-								<button class="btn btn-lg btn-success" type="submit">
-									<i class="glyphicon glyphicon-ok-sign"></i> Save
-								</button>
-								<button class="btn btn-lg" type="reset">
-									<i class="glyphicon glyphicon-repeat"></i> Reset
-								</button>
+								<button class="btn btn-primary" type="submit" style="height=24px; width=50px; border-radius=3px;">Lưu</button>
 							</div>
 						</div>
 						</form>
-
 						<hr>
-
-					</div>
-					<!--/tab-pane-->
-					<div class="tab-pane" id="messages">
-
-						<h2></h2>
-
-						<hr>
-
-
-					</div>
-					<!--/tab-pane-->
-					<div class="tab-pane" id="settings">
-
-
-						<hr>
-						<form class="form" action="" method="post" id="registrationForm">
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="first_name"><h4>First name</h4></label> <input
-										type="text" class="form-control" name="first_name"
-										id="first_name" placeholder="first name"
-										title="enter your first name if any.">
-								</div>
-							</div>
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="last_name"><h4>Last name</h4></label> <input
-										type="text" class="form-control" name="last_name"
-										id="last_name" placeholder="last name"
-										title="enter your last name if any.">
-								</div>
-							</div>
-
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="phone"><h4>Phone</h4></label> <input type="text"
-										class="form-control" name="phone" id="phone"
-										placeholder="enter phone"
-										title="enter your phone number if any.">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="col-xs-6">
-									<label for="mobile"><h4>Mobile</h4></label> <input type="text"
-										class="form-control" name="mobile" id="mobile"
-										placeholder="enter mobile number"
-										title="enter your mobile number if any.">
-								</div>
-							</div>
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="email"><h4>Email</h4></label> <input type="email"
-										class="form-control" name="email" id="email"
-										placeholder="you@email.com" title="enter your email.">
-								</div>
-							</div>
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="email"><h4>Location</h4></label> <input
-										type="email" class="form-control" id="location"
-										placeholder="somewhere" title="enter a location">
-								</div>
-							</div>
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="password"><h4>Password</h4></label> <input
-										type="password" class="form-control" name="password"
-										id="password" placeholder="password"
-										title="enter your password.">
-								</div>
-							</div>
-							<div class="form-group">
-
-								<div class="col-xs-6">
-									<label for="password2"><h4>Verify</h4></label> <input
-										type="password" class="form-control" name="password2"
-										id="password2" placeholder="password2"
-										title="enter your password2.">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-xs-12">
-									<br>
-									<button class="btn btn-lg btn-success pull-right" type="submit">
-										<i class="glyphicon glyphicon-ok-sign"></i> Save
-									</button>
-									<!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
-								</div>
-							</div>
-						</form>
 					</div>
 
 				</div>
@@ -253,10 +141,49 @@
 			</div>
 			<!--/tab-content-->
 
+		<!--=== Footer v4 ===-->
+		<div style="margin-top: 290px;">
+		<jsp:include page="footer.jsp"></jsp:include>
 		</div>
-		<!--/col-9-->
+		<!--=== End Footer v4 ===-->
 	</div>
-	<!--/row-->
+	<!--/wrapper-->
+
+	<!-- JS Global Compulsory -->
+	<script src="${url}/plugins/jquery/jquery.min.js"></script>
+	<script src="${url}/plugins/jquery/jquery-migrate.min.js"></script>
+	<script src="${url}/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script src="${url}/plugins/back-to-top.js"></script>
+	<script src="${url}/plugins/smoothScroll.js"></script>
+	<script
+		src="${url}/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+	<script
+		src="${url}/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- JS Customization -->
+	<script src="${url}/js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script src="${url}/js/shop.app.js"></script>
+	<script src="${url}/js/forms/page_registration.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			App.init();
+			App.initScrollBar();
+			Registration.initRegistration();
+		});
+	</script>
+
+	<!--[if lt IE 9]>
+    <script src="${url}/plugins/respond.js"></script>
+    <script src="${url}/plugins/html5shiv.js"></script>
+    <script src="${url}/js/plugins/placeholder-IE-fixes.js"></script>    
+    <script src="${url}/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+<![endif]-->
+	<!--[if lt IE 10]>
+    <script src="${url}/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+<![endif]-->
+
+</body>
 
 </body>
 </html>

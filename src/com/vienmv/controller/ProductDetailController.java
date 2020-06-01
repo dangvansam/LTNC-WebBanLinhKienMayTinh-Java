@@ -9,9 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.vienmv.model.Category;
 import com.vienmv.model.Product;
+import com.vienmv.model.User;
 import com.vienmv.service.CategoryService;
 import com.vienmv.service.ProductService;
 import com.vienmv.service.impl.CategoryServiceImpl;
@@ -30,7 +32,14 @@ public class ProductDetailController extends HttpServlet {
 		req.setAttribute("categories", categories);
 
 		req.setAttribute("product", product);
-
+		
+		//Get session username
+		HttpSession session= req.getSession();
+		if(session != null && session.getAttribute("account") != null) {
+			User u=(User) session.getAttribute("account");
+			req.setAttribute("username", u.getUsername());
+			
+			}
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/product-detail.jsp");
 		dispatcher.forward(req, resp);
 	}

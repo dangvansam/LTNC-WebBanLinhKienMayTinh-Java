@@ -60,10 +60,10 @@
 											<tr>
 												<th>ID</th>
 												<th>Username</th>
-												<th>Email</th>
 												<th>Password</th>
-												<th> User-Type </th>
+												<th>Email</th>
 												<th>Action</th>
+												<th> User-Type </th>
 											</tr>
 										</thead>
 										<tbody>
@@ -71,7 +71,6 @@
 												<tr class="odd gradeX">
 													<td>${user.id }</td>
 													<td>${user.username }</td>
-													<td>${user.email }</td>
 													<td>${user.password }</td>
 
 													<td class="center"><c:choose>
@@ -80,6 +79,8 @@
 													<c:otherwise>Client
 													</c:otherwise>
 													</c:choose></td>
+
+													<td>${user.email }</td>
 
 													<td><a
 														href="<c:url value='/admin/user/edit?id=${user.id }'/>"

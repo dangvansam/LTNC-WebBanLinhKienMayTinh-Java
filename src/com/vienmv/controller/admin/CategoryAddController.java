@@ -18,7 +18,8 @@ import com.vienmv.service.impl.CategoryServiceImpl;
 @WebServlet(urlPatterns = { "/admin/category/add" })
 public class CategoryAddController extends HttpServlet {
 	CategoryService cateService = new CategoryServiceImpl();
-
+	Category category = new Category();
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/add-category.jsp");
@@ -27,11 +28,11 @@ public class CategoryAddController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String name = req.getParameter("name");
+		//System.out.println(req);
+		String name = req.getParameter("cate_name");
 		System.out.println("***********");
 		System.out.println(name);
 		System.out.println("***********");
-		Category category = new Category();
 		category.setName(name);
 		cateService.insert(category);
 		resp.sendRedirect(req.getContextPath() + "/admin/category/list");

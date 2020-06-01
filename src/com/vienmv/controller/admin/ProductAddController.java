@@ -60,7 +60,7 @@ public class ProductAddController extends HttpServlet {
 				} else if (item.getFieldName().equals("des")) {
 					product.setDes(item.getString());;
 				} else if (item.getFieldName().equals("image")) {
-					final String dir = "F:\\upload";
+					final String dir = "D:\\Lap trinh nang cao\\UNIFY\\WebContent\\Images";
 					String originalFileName = item.getName();
 					int index = originalFileName.lastIndexOf(".");
 					String ext = originalFileName.substring(index + 1);

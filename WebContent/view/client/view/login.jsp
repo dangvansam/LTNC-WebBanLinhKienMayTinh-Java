@@ -85,14 +85,12 @@
 		<!--=== Breadcrumbs v4 ===-->
 		<div class="breadcrumbs-v4">
 			<div class="container">
-				<span class="page-name">Log In</span>
 				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
+					SD<span class="shop-green">COMPUTER</span>
 				</h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="">Product</a></li>
-					<li class="active">Log In</li>
+					<li><a href="${pageContext.request.contextPath }/welcome">Trang chủ</a></li>
+					<li class="active">Đăng nhập</li>
 				</ul>
 			</div>
 			<!--/end container-->
@@ -104,41 +102,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 md-margin-bottom-50">
-						<h2 class="welcome-title">Welcome to Unify</h2>
-						<p>Suspendisse et tincidunt ipsum, et dignissim urna.
-							Vestibulum nisl tortor, gravida at magna et, suscipit vehicula
-							massa.</p>
-						<br>
-						<div class="info-block-v2">
-							<i class="icon icon-layers"></i>
-							<div class="info-block-in">
-								<h3>Pellentesque vulputate</h3>
-								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper
-									nunc. Integer sed nibh commodo, tincidunt nisi.</p>
-							</div>
-						</div>
-						<div class="info-block-v2">
-							<i class="icon icon-settings"></i>
-							<div class="info-block-in">
-								<h3>Curabitur tincidunt</h3>
-								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper
-									nunc. Integer sed nibh commodo, tincidunt nisi.</p>
-							</div>
-						</div>
-						<div class="info-block-v2">
-							<i class="icon icon-paper-plane"></i>
-							<div class="info-block-in">
-								<h3>Aenean condimentum</h3>
-								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper
-									nunc. Integer sed nibh commodo, tincidunt nisi.</p>
-							</div>
-						</div>
+						<h2 class="welcome-title">Chào mừng đến với SDCOMPUTER</h2>
+						<p>Cửa hàng linh kiện thiết bị máy tính cao cấp Hà Nội.</p>
 					</div>
 
 					<div class="col-md-5">
 						<form id="sky-form1" class="log-reg-block sky-form" action="login"
 							method="post">
-							<h2>Log in to your account</h2>
+							<h2>Đăng nhập</h2>
 							<h3>${alertMsg }</h3>
 
 
@@ -146,7 +117,7 @@
 								<label class="input login-input">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user"></i></span>
-										<input type="text" placeholder="User name" name="username"
+										<input type="text" placeholder="Username" name="username"
 											class="form-control">
 									</div>
 								</label>
@@ -161,17 +132,10 @@
 								</label>
 							</section>
 							<div class="row margin-bottom-5">
-								<div class="col-xs-6">
-									<label class="checkbox"> <input type="checkbox"
-										name="checkbox" /> <i></i> Remember me
-									</label>
-								</div>
-								<div class="col-xs-6 text-right">
-									<a href="#">Forget your Password?</a>
-								</div>
+
 							</div>
 							<button class="btn-u btn-u-sea-shop btn-block margin-bottom-20"
-								type="submit">Log in</button>
+								type="submit">Đăng nhập</button>
 
 							<div class="border-wings">
 								<span>or</span>
@@ -193,8 +157,8 @@
 
 						<div class="margin-bottom-20"></div>
 						<p class="text-center">
-							Don't have account yet? Learn more and <a
-								href="${pageContext.request.contextPath }/register">Sign Up</a>
+							Bạn chưa có tài khoản? <a
+								href="${pageContext.request.contextPath }/register">Đăng ký ngay</a>
 						</p>
 					</div>
 				</div>
@@ -203,32 +167,6 @@
 			<!--/end container-->
 		</div>
 		<!--=== End Login ===-->
-
-		<!--=== Shop Suvbscribe ===-->
-		<div class="shop-subscribe">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 md-margin-bottom-20">
-						<h2>
-							subscribe to our weekly <strong>newsletter</strong>
-						</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="input-group">
-							<input type="text" class="form-control"
-								placeholder="Email your email..."> <span
-								class="input-group-btn">
-								<button class="btn" type="button">
-									<i class="fa fa-envelope-o"></i>
-								</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/end container-->
-		</div>
-		<!--=== End Shop Suvbscribe ===-->
 
 		<!--=== Footer v4 ===-->
 		<jsp:include page="footer.jsp"></jsp:include>

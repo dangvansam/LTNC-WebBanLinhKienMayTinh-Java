@@ -71,10 +71,10 @@
 												<td><a
 														href="<c:url value='/category/detail?id=${cat.id }'/>"
 														class="center">Detail</a> | <a
-														href="<c:url value='/admin/product/edit?id=${cat.id }'/>"
+														href="<c:url value='/admin/category/edit?id=${cat.id }'/>"
 														class="center">Edit</a>
 														| <a
-														href="<c:url value='/admin/product/delete?id=${cat.id }'/>"
+														href="<c:url value='/admin/category/delete?id=${cat.id }'/>"
 														class="center">Delete</a></td>
 												
 											</tr>

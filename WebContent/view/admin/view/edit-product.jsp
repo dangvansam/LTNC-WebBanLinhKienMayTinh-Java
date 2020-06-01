@@ -8,7 +8,7 @@
 <script src="<c:url value="/ckeditor/ckeditor.js" />"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edit User</title>
+<title>Edit Product</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -29,8 +29,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Add Product</h2>
-						<h5>Add product you can sell</h5>
+						<h2>Edit Product</h2>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -39,17 +38,15 @@
 					<div class="col-md-12">
 						<!-- Form Elements -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Add Product</div>
 							<div class="panel-body">
 								<div class="row">
-									<div class="col-md-6">
-										<h3>User:</h3>
+									<div class="" style="padding: 28px;">
 										<c:url value="/admin/product/edit" var="edit"></c:url>
-										<form role="form" action="${edit }" method="post"
+										<form role="form" action="${list }" method="post"
 											enctype="multipart/form-data">
 											<input name="id" value="${product.id }" hidden="">
 											<div class="form-group">
-												<label>Name:</label> <input class="form-control"
+												<label>Name</label> <input class="form-control"
 													value="${product.name }" name="name" />
 											</div>
 											<div class="form-group">
@@ -57,8 +54,8 @@
 													value="${product.price }" type="number" name="price" />
 											</div>
 											<div class="form-group">
-												<label>Description </label> <br>
-												<textarea rows="4" cols="50" name="des" id="editer" >${product.des }</textarea>
+												<label>Description</label> <input class="form-control"
+													value="${product.des }" name="des" />
 											</div>
 
 											<div class="form-group">
@@ -73,10 +70,10 @@
 
 											</div>
 											<div class="form-group">
-												<label>image</label> <input type="file" name="image" value="${product.image }" />
+												<label>Image</label> <input type="file" name="image" value="${product.image }" />
 											</div>
-											<button type="submit" class="btn btn-default">Edit</button>
-											<button type="reset" class="btn btn-primary">Reset</button>
+											<button type="submit" class="btn btn-primary">Edit</button>
+											<button type="reset" class="btn btn-warning">Reset</button>
 										</form>
 
 
