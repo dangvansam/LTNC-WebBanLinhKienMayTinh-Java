@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <c:url value="/view/client/static" var="url"></c:url>
-<title>Register</title>
+<title>Tài khoản của tôi</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico">
 

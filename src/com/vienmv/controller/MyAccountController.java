@@ -32,7 +32,6 @@ public class MyAccountController extends HttpServlet {
 		if(session != null && session.getAttribute("account") != null) {
 			User u=(User) session.getAttribute("account");
 			req.setAttribute("username", u.getUsername());
-			
 			}
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/view/myaccount.jsp");
 		dispatcher.forward(req, resp);

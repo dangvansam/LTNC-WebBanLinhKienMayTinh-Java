@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <ul class="list-inline shop-badge badge-lists badge-icons pull-right">
 	<li><a href="#"><i class="fa fa-shopping-cart"></i></a> <c:set
 			var="count" value="${0}" /> <c:forEach items="${sessionScope.cart}"
@@ -15,7 +15,7 @@
 						var="imgUrl"></c:url> <img src="${imgUrl}" alt="" width="10"
 					height="20"> <a
 					href="${pageContext.request.contextPath}/member/cart/remove?pId=${map.value.product.id} "><button
-							type="button" class="close">×</button></a>
+							type="button" class="close">Ã—</button></a>
 					<div class="overflow-h">
 						<span>${map.value.product.name }</span> <small>${map.value.quantity }
 							* ${map.value.product.price }.0 $ </small>

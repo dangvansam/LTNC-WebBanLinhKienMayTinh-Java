@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <div class="col-md-3 filter-by-block md-margin-bottom-60">
 					<h1>Filter By</h1>
 					<div class="panel-group" id="accordion">
@@ -7,26 +7,17 @@
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion"
-										href="#collapseOne"> Name <i class="fa fa-angle-down"></i>
+										href="#collapseOne">Tìm theo tên<i class="fa fa-angle-down"></i>
 									</a>
 								</h2>
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-									
-									
+									<ul class="list-unstyled checkbox-list">				
 										<form action="${pageContext.request.contextPath }/product/seach" method="get">
 											<input type="text" name="name" />
-											<input type="submit" value="Seach" >
-											
-
+											<input type="submit" value="Tìm kiếm" >
 										</form>
-
-
-
-
-
 									</ul>
 								</div>
 							</div>
@@ -39,7 +30,7 @@
 							<div class="panel-heading">
 								<h2 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion-v2"
-										href="#collapseTwo"> Categories <i
+										href="#collapseTwo">Loại sản phẩm<i
 										class="fa fa-angle-down"></i>
 									</a>
 								</h2>
@@ -47,101 +38,21 @@
 							<div id="collapseTwo" class="panel-collapse collapse in">
 								<div class="panel-body">
 									<ul class="list-unstyled checkbox-list">
-										<a href="${pageContext.request.contextPath }/product/category?cate_id=1" > MEN</a>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=1" >RAM</a>
 										<br>
-										<a href="${pageContext.request.contextPath }/product/category?cate_id=2" > WOMAN</a>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=2" >VGA</a>
 										<br>
-										<a href="${pageContext.request.contextPath }/product/category?cate_id=3" > CHILDREN</a>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v3">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v3"
-										href="#collapseThree"> Size <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> S <small><a
-													href="#">(23)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" checked /> <i></i> M <small><a
-													href="#">(4)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> L <small><a
-													href="#">(11)</a></small>
-										</label></li>
-										<li><label class="checkbox"> <input
-												type="checkbox" name="checkbox" /> <i></i> XL <small><a
-													href="#">(3)</a></small>
-										</label></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v4"
-										href="#collapseFour"> Price <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<div class="slider-snap"></div>
-									<p class="slider-snap-text">
-										<span class="slider-snap-value-lower"></span> <span
-											class="slider-snap-value-upper"></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v5">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v5"
-										href="#collapseFive"> Color <i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFive" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-inline product-color-list">
-										<li><a href="#"><img src="${url}/img/colors/01.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/02.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/03.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/04.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/05.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/06.jpg"
-												alt=""></a></li>
-										<li><a href="#"><img src="${url}/img/colors/07.jpg"
-												alt=""></a></li>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=3" >HDD</a>
+										<br>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=4" >SSD</a>
+										<br>	
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=5" >Bàn phím</a>
+										<br>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=6" >Chuột</a>
+										<br>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=7" >Màn hình</a>
+										<br>
+										<a href="${pageContext.request.contextPath }/product/category?cate_id=8" >CPU</a>
 									</ul>
 								</div>
 							</div>

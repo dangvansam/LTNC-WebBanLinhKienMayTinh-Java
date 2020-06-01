@@ -121,7 +121,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../img/breadcrumbs-img.jpg);
+  background: currentColor;
+  /*background-image: url(../img/breadcrumbs-img.jpg);*/
 }
 
 .breadcrumbs-v4:before {
