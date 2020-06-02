@@ -61,14 +61,13 @@
 		<!--=== Breadcrumbs v4 ===-->
 		<div class="breadcrumbs-v4">
 			<div class="container">
-				<span class="page-name">Product  Page</span>
 				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
+					SD<span class="shop-green">COMPUTER</span>
 				</h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="${pageContext.request.contextPath }">Home</a></li>
-					<li><a href="${pageContext.request.contextPath }/product/list">Product</a></li>
-					<li class="active">List Product</li>
+					<li><a href="${pageContext.request.contextPath }">Trang chủ</a></li>
+					<li><a href="${pageContext.request.contextPath }/product/list">Danh sách sản phẩm</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath }/product/category?cate_id=${category_id}">Tìm kiếm trong ${category_name}</li>
 				</ul>
 			</div>
 			<!--/end container-->
@@ -124,28 +123,25 @@
 							</ul>
 						</div>
 					</div>
+					
 					<!--/end result category-->
 					<c:forEach items="${productSeachByCategory }" var="p" >
-
 					<div class="filter-results">
-					
 						<div
-							class="list-product-description product-description-brd margin-bottom-30">
+							class="list-product-description product-description-brd">
 							<div class="row">
 							
 								<div class="col-sm-4">
-								<c:url value="/image?fname=${p.image }" var="imgUrl"></c:url>
+								<c:url value="/Images/${p.image }" var="imgUrl"></c:url>
 									<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}"><img
 										class="img-responsive sm-margin-bottom-20"
 										src="${imgUrl}" alt=""></a>
 								</div>
 								<div class="col-sm-8 product-description">
-									
-									
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
 											<li><h4 class="title-price">
-													<a href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">${p.name }</a>
+													<a style="font-weight: bold;" href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">${p.name }</a>
 													
 												</h4></li>
 											<li><span class="gender text-uppercase">${p.category.name }</span></li>
@@ -160,29 +156,14 @@
 											</li>
 										</ul>
 										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">$ ${p.price }.0</span> <span
-												class="title-price line-through">$ ${p.price *1.25 }</span>
-											
+											<span style="color: coral;" class="title-price margin-right-10">${p.price } đ</span>
 										</div>
 										<p class="margin-bottom-20">${p.des }</p>
-										
-										<ul class="list-inline add-to-wishlist margin-bottom-20">
-											<li class="wishlist-in"><i class="fa fa-heart"></i> <a
-												href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">Add to Wishlist</a></li>
-											<li class="compare-in"><i class="fa fa-exchange"></i> <a
-												href=""${pageContext.request.contextPath }/product/detail?id=${p.id}"">Add to Compare</a></li>
-										</ul>
-										<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}" ><button type="button" class="btn-u btn-u-sea-shop">Add
-											to Cart</button></a>
+										<a href="${pageContext.request.contextPath }/product/detail?id=${p.id}" ><button type="button" class="btn-u btn-u-sea-shop">Thêm vào giỏ hàng</button></a>
 									</div>
-									
-									
-									
 								</div>								
 							</div>
-							
 						</div>
-
 					</div>
 					</c:forEach>
 					<!--/end filter resilts-->
@@ -203,33 +184,6 @@
 		</div>
 		<!--/end container-->
 		<!--=== End Content Part ===-->
-
-		<!--=== Shop Suvbscribe ===-->
-		<div class="shop-subscribe">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 md-margin-bottom-20">
-						<h2>
-							subscribe to our weekly <strong>newsletter</strong>
-						</h2>
-					</div>
-					<div class="col-md-4">
-						<div class="input-group">
-							<input type="text" class="form-control"
-								placeholder="Email your email..."> <span
-								class="input-group-btn">
-								<button class="btn" type="button">
-									<i class="fa fa-envelope-o"></i>
-								</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/end container-->
-		</div>
-		<!--=== End Shop Suvbscribe ===-->
-
 		<!--=== Footer v4 ===-->
 		<jsp:include page="footer.jsp"></jsp:include>
 		<!--=== End Footer v4 ===-->

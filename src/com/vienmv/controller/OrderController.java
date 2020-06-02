@@ -53,15 +53,16 @@ public class OrderController extends HttpServlet {
 			for (CartItem cartItem : map.values()) {
 				cartItem.setCart(cart);
 				cartItem.setId(RandomUUID.getRandomID());
-				SendMail sm = new SendMail();
-				sm.sendMail(cart.getBuyer().getEmail(), "UNIFY", "Payment success. We will contact you soon ! ");
+				//SendMail sm = new SendMail();
+				//sm.sendMail(cart.getBuyer().getEmail(), "UNIFY", "Payment success. We will contact you soon ! ");
 				cartItemService.insert(cartItem);
 				
 			}
+			System.out.println("**********inserted oder to db***********");
 
 		}
 		session.removeAttribute("cart");
-		resp.sendRedirect(req.getContextPath() + "/home");
+		resp.sendRedirect(req.getContextPath());
 
 	}
 

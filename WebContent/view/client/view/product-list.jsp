@@ -80,7 +80,7 @@
 
 				<div class="col-md-9">
 					<div class="row margin-bottom-5">
-						<div class="col-sm-8">
+						<div class="col-sm-12">
 							<ul class="list-inline clear-both">
 								<li class="grid-list-icons"><a
 									href="shop-ui-filter-list.html"><i class="fa fa-th-list"></i></a>
@@ -125,7 +125,7 @@
 						<div class="filter-results">
 
 							<div
-								class="list-product-description product-description-brd margin-bottom-30">
+								class="list-product-description product-description-brd">
 								<div class="row">
 									<div class="col-sm-4">
 										<c:url value="/Images/${p.image }" var="imgUrl"></c:url>
