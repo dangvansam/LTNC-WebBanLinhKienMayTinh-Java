@@ -15,6 +15,6 @@ Admin Dasboard
 Index  
  ![alt text](home.PNG)
 List Product  
- ![alt text](product-list.png)  
+ ![alt text](product-list.PNG)  
 Product Detail  
- ![alt text](product-detail.png)
+ ![alt text](product-detail.PNG)
